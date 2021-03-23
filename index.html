@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Square eyes</title>
+    <title>Museum of Ipsum</title>
     <meta charset="UTF-8" />
     <meta name="author" content="Dennis-Hass" />
     <meta name="description" content="Community Science Museum" />
@@ -9,25 +9,27 @@
     <link href="css/style.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Nunito&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Heebo&family=Nunito&display=swap"
       rel="stylesheet"
     />
   </head>
   <body>
     <header>
-      <img src="/images/logo museum.png" alt="logo" />
+      <a href="index.html"
+        ><img class="logo" src="/images/logo museum.png" alt="logo"
+      /></a>
       <ul>
-        <div>
-          <button>Exsplore</button>
-          <div>
+        <div class="dropdown">
+          <button class="dropbutton">Exsplore</button>
+          <div class="dropdown-items">
             <a href="kids.html">For Kids</a>
             <a href="to-do.html">Parents</a>
             <a href="researcher.html">Researcher</a>
           </div>
         </div>
-        <div>
-          <button>Exhibition</button>
-          <div>
+        <div class="dropdown">
+          <button class="dropbutton">Exhibition</button>
+          <div class="dropdown-items">
             <a href="cosmology.html">Cosmology</a>
             <a href="evolution.html">Evolution</a>
             <a href="bio-meds.html">Bio and Medecine</a>
@@ -38,5 +40,10 @@
         <a href="hours-oph.html">Visit?</a>
       </ul>
     </header>
+    <div class="welcome">
+      <h1>Welcome to the Museum of Ipsum</h1>
+
+      <img src="/images/scott-webb-102825.jpg" alt="intro" />
+    </div>
   </body>
 </html>
