@@ -1,13 +1,14 @@
 @font-face {
-    font-family: 'Nunito';
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-    src: url(https://fonts.gstatic.com/s/nunito/v16/XRXV3I6Li01BKofIOOaBXso.woff2) format('woff2');
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/nunito/v16/XRXV3I6Li01BKofIOOaBXso.woff2)
+    format("woff2");
 }
 
-header{
-height: 300px;
-width: 100%;
-color: rgb(47, 173, 190);
+header {
+  height: 300px;
+  width: 100%;
+  background-color: rgb(47, 173, 190);
 }
