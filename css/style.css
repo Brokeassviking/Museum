@@ -14,6 +14,19 @@
   src: url(https://fonts.gstatic.com/s/heebo/v10/NGSpv5_NC0k9P_v6ZUCbLRAHxK1EiSysd0mm_00.woff2)
     format("woff2");
 }
+:root {
+  --main-text: "Heebo";
+  --small-text: "Nunito";
+  --babyblue: #2fadbe;
+}
+h2 {
+  font-family: var(--main-text);
+}
+
+p {
+  width: 500px;
+  font-family: var(--small-text);
+}
 
 header {
   height: 125px;
@@ -87,7 +100,7 @@ header {
   font-family: "Nunito", sans-serif;
 }
 .welcome img {
-  position: fixed;
+  position: static;
   height: 400px;
   width: 80%;
   left: 190px;
