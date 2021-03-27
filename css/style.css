@@ -9,15 +9,24 @@
 @font-face {
   font-family: "Heebo";
   font-style: normal;
-  font-weight: 400;
+  font-weight: 500;
   font-display: swap;
   src: url(https://fonts.gstatic.com/s/heebo/v10/NGSpv5_NC0k9P_v6ZUCbLRAHxK1EiSysd0mm_00.woff2)
+    format("woff2");
+}
+@font-face {
+  font-family: "Barlow Semi Condensed";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/barlowsemicondensed/v6/wlpigxjLBV1hqnzfr-F8sEYMB0Yybp0mudRfi6m_CWslu50.woff2)
     format("woff2");
 }
 :root {
   --main-text: "Heebo";
   --small-text: "Nunito";
   --babyblue: #2fadbe;
+  --menu-green: #26bf6d;
 }
 
 h2 {
@@ -38,6 +47,7 @@ header {
   top: -6px;
   left: -7px;
   box-shadow: 0px 3px 6px 0px black;
+  z-index: 2;
 }
 header a {
   font-family: var(--main-text);
@@ -99,7 +109,7 @@ header a {
 }
 
 .dropdown:hover .dropbutton {
-  background-color: #3cd128;
+  background-color: #26bf6d;
   padding: 16px;
 }
 
@@ -108,12 +118,24 @@ header a {
   font-family: "Nunito", sans-serif;
   margin-top: 200px;
 }
+.welcome h1 {
+  position: relative;
+  top: 390px;
+  right: 470px;
+  width: 500px;
+  left: 210px;
+  z-index: 1;
+  background: #26bf6d;
+  border-radius: 30%;
+}
 
 .welcome img {
-  position: static;
+  position: relative;
   height: 400px;
   width: 80%;
-  left: 190px;
+  left: 0px;
+  left: 0px;
+  filter: opacity(30%);
 }
 
 .fp-img {
@@ -133,11 +155,16 @@ header a {
   margin-top: 14px;
   background-color: white;
   margin-right: -330px;
-  padding-left: 0px;
-  padding-right: 0px;
   width: 1032.5px;
   margin-bottom: 36px;
   border-radius: 2%;
+  padding-left: 30px;
 }
+.fp-img-1 {
+  height: 500px;
+  width: 500px;
+  margin-left: 200px;
+}
+
 @media screen and (min-width: 300px) and (max-width: 600px) {
 }
