@@ -1,0 +1,211 @@
+@font-face {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/nunito/v16/XRXV3I6Li01BKofIOOaBXso.woff2)
+    format("woff2");
+}
+@font-face {
+  font-family: "Heebo";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/heebo/v10/NGSpv5_NC0k9P_v6ZUCbLRAHxK1EiSysd0mm_00.woff2)
+    format("woff2");
+}
+@font-face {
+  font-family: "Barlow Semi Condensed";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/barlowsemicondensed/v6/wlpigxjLBV1hqnzfr-F8sEYMB0Yybp0mudRfi6m_CWslu50.woff2)
+    format("woff2");
+}
+html{
+  max-width: 2500px ;
+  overflow-x: hidden;
+  
+}
+.body-1{
+  background-color: #000000c2;
+}
+:root {
+  --main-text: "Heebo";
+  --small-text: "Nunito";
+  --babyblue: #2fadbe;
+  --menu-green: #26bf6d;
+  --flex: flex: 1
+}
+
+h2 {
+  font-family: var(--main-text);
+}
+
+p {
+  width: 500px;
+  font-family: var(--small-text);
+}
+.grid-fp {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  grid-template-areas: 
+  "header header header header"
+  "intro intro intro intro"
+  "main main main main"
+  "footer footer footer footer"
+  ;
+  
+}
+.grid-a1 {
+ grid-area: main;
+  margin-top: 38px;
+ 
+  padding-top: 15px;
+  display: flex;
+  
+}
+.grid-a1 img{
+margin-top: 30px;
+}
+.grid-a2{
+ grid-area: footer;
+ display: flex;
+ gap: 100px;
+ margin-top: 100px;
+margin-left: 100px;
+}
+
+
+header {
+  grid-area: header;
+  height: 125px;
+  width: 100%;
+  background-color: #2fadbe;
+  display: flex;
+  box-shadow: 0px 3px 6px 0px black;
+  z-index: 2;
+}
+header a {
+  font-family: var(--main-text);
+}
+
+.logo {
+  display: inline-block;
+  height: 125px;
+  width: 125px;
+}
+
+.background-cosmo {
+  background-image: url(/images/ivana-cajina-asuyh-_ZX54-unsplash.jpg);
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+}
+
+.dropbutton {
+  background-color: #2fadbe;
+  color: white;
+  padding: 0px 16px;
+  font-size: 16px;
+  border: none;
+  font-family: "Heebo", sans-serif;
+  border-radius: 20px;
+  margin-left: 100px;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  border-radius: 15px;
+}
+
+.dropdown-items {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 10px;
+}
+
+.dropdown-items a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-items a:hover {
+  background-color: rgb(180, 180, 180);
+}
+
+.dropdown:hover .dropdown-items {
+  display: block;
+}
+
+.dropdown:hover .dropbutton {
+  background-color: #26bf6d;
+  padding: 16px;
+}
+
+.welcome {
+  grid-area: intro;
+  text-align: center;
+  font-family: "Nunito", sans-serif;
+  margin-top: 200px;
+  
+}
+.welcome h1 {
+  position: relative;
+  top: 390px;
+  right: 470px;
+  width: 500px;
+  left: 210px;
+  z-index: 1;
+  background: #26bf6d;
+  border-radius: 30%;
+}
+
+.welcome img {
+  position: relative;
+  height: 400px;
+  width: 90%;
+ 
+}
+
+.fp-img {
+  height: 500px;
+  width: 450px;
+}
+
+.grid-a1-img{
+  width: 500px;
+  height: 500px;
+  flex: 50%;
+  margin-right: 300px;
+
+}
+
+.txt-fp {
+  margin-left: 36px;
+  margin-top: 15px;
+  background-color: red;
+  margin-right: -629px;
+  width: 1032.5px;
+  margin-bottom: 36px;
+  border-radius: 10%;
+  padding-left: 85px;
+  padding-top: 60px;
+  flex: 50%;
+  color: white;
+}
+
+
+@media screen and (min-width: 300px) and (max-width: 600px) {
+}
+
+@media screen and (min-width: 900px) {
+}
