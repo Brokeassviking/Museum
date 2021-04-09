@@ -27,7 +27,7 @@ html{
   overflow-x: hidden;
   
 }
-.body-1{
+.body-hp{
   background-color: #000000c2;
 }
 :root {
@@ -43,8 +43,12 @@ h2 {
 }
 
 p {
-  width: 500px;
-  font-family: var(--small-text);
+  
+width: 500px;
+font-family: var(--small-text);
+background: red;
+color: white;
+padding: 12px;
 }
 .grid-fp {
   display: grid;
@@ -179,6 +183,7 @@ header a {
 .fp-img {
   height: 500px;
   width: 450px;
+  border: solid white 20px;
 }
 
 .grid-a1-img{
@@ -196,11 +201,13 @@ header a {
   margin-right: -629px;
   width: 1032.5px;
   margin-bottom: 36px;
-  border-radius: 10%;
+  border-radius: 4%;
   padding-left: 85px;
   padding-top: 60px;
   flex: 50%;
   color: white;
+  border: solid;
+
 }
 
 
