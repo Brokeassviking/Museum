@@ -22,8 +22,16 @@
   src: url(https://fonts.gstatic.com/s/barlowsemicondensed/v6/wlpigxjLBV1hqnzfr-F8sEYMB0Yybp0mudRfi6m_CWslu50.woff2)
     format("woff2");
 }
+
+@font-face {
+  font-family: 'Audiowide';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;  src: url(https://fonts.gstatic.com/s/audiowide/v9/l7gdbjpo0cum0ckerWCdmA_OIxo.woff2) format('woff2');}
+
+
 html{
-  max-width: 2500px ;
+  max-width: auto;
   overflow-x: hidden;
   
 }
@@ -38,6 +46,10 @@ html{
   --flex: flex: 1
 }
 
+.a-1{
+  position: relative;
+}
+
 h2 {
   font-family: var(--main-text);
 }
@@ -46,7 +58,6 @@ p {
   
 width: 500px;
 font-family: var(--small-text);
-background: red;
 color: white;
 padding: 12px;
 }
@@ -60,6 +71,7 @@ padding: 12px;
   "main main main main"
   "footer footer footer footer"
   ;
+  margin: auto;
   
 }
 .grid-a1 {
@@ -70,9 +82,7 @@ padding: 12px;
   display: flex;
   
 }
-.grid-a1 img{
-margin-top: 30px;
-}
+
 .grid-a2{
  grid-area: footer;
  display: flex;
@@ -108,7 +118,7 @@ header a {
   background-size: cover;
 }
 
-.dropbutton {
+.dropdb {
   background-color: #2fadbe;
   color: white;
   padding: 0px 16px;
@@ -116,7 +126,9 @@ header a {
   border: none;
   font-family: "Heebo", sans-serif;
   border-radius: 20px;
-  margin-left: 100px;
+  margin-left: 190px;
+  margin-top: 60px;
+  box-sizing: border-box;
 }
 
 .dropdown {
@@ -133,6 +145,8 @@ header a {
   box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
   border-radius: 10px;
+  margin-left:  190px; 
+  margin-top: 15px;  
 }
 
 .dropdown-items a {
@@ -143,42 +157,49 @@ header a {
 }
 
 .dropdown-items a:hover {
-  background-color: rgb(180, 180, 180);
+  background-color: rgb(139, 134, 134);
 }
 
 .dropdown:hover .dropdown-items {
   display: block;
 }
-
-.dropdown:hover .dropbutton {
+@keyframes dropup {
+ 0% {padding: 0px 40px 0px 40px;}
+ 50%{padding: 0px 40px 0px 40px;}
+ 75%{padding: 0px 40px 0px 40px;}
+100% {padding: 0px 40px 0px 40px;}
+}
+.dropdown:hover .dropdb {
   background-color: #26bf6d;
-  padding: 16px;
+  padding: 10px 40px 10px 40px;
+  animation-name: dropup;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  
+
 }
 
+
+
+
 .welcome {
+  
   grid-area: intro;
   text-align: center;
   font-family: "Nunito", sans-serif;
   margin-top: 200px;
   
 }
-.welcome h1 {
-  position: relative;
-  top: 390px;
-  right: 470px;
-  width: 500px;
-  left: 210px;
-  z-index: 1;
-  background: #26bf6d;
-  border-radius: 30%;
+.intro-txt{
+  position: absolute;
+  top: 25%;
+  width: 100%;
+  background: #fff;
+  padding: 50px;
+  margin: auto;
 }
 
-.welcome img {
-  position: relative;
-  height: 400px;
-  width: 90%;
- 
-}
+
 
 .fp-img {
   height: 500px;
@@ -191,6 +212,7 @@ header a {
   height: 500px;
   flex: 50%;
   margin-right: 300px;
+  margin-top: 90px
 
 }
 
@@ -208,6 +230,86 @@ header a {
   color: white;
   border: solid;
 
+}
+
+.container{
+  position: relative;
+}
+
+.txt-ff {
+  color: white;
+  text-decoration:bold;
+  position: absolute;
+  top: 160px;
+  left: 550px;
+  z-index: 2;
+  font-family: 'Audiowide', cursive;
+  font-size: x-large;
+}
+.fun-fact {
+  text-align: center;
+  position: absolute;
+  top: 100px;
+  left: 500px;
+  width: 200px;
+  height: 200px;
+  display: block;
+  background: red;
+  border-radius: 100%;
+  z-index: 1;
+  border: solid black 3px;
+}
+.fun-fact-1 {
+  top: 110px;
+  left: 480px;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  display: block;
+  background: green;
+  border-radius: 100%;
+  z-index: -1;
+}
+.fun-fact-2 {
+  left: 600px;
+  top: 100px;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  display: block;
+  background: purple;
+  border-radius: 100%;
+  z-index: -1;
+}
+.fun-fact-3 {
+  top: 220px;
+  left: 500px;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  display: block;
+  background: blue;
+  border-radius: 100%;
+  z-index: -1;
+}
+.fun-fact-4 {
+  left: 620px;
+  top: 220px;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  display: block;
+  background: yellow;
+  border-radius: 100%;
+  z-index: 1;
+}
+span{
+  content: "";
+  width: 800px;
+  height: 5px;
+  background: black;
+  display: block;
+  margin-bottom: 15px;
 }
 
 

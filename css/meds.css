@@ -1,0 +1,19 @@
+@import "style.css";
+
+.grid-meds {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "header header header header"
+    ". . intro ."
+    "main main main main"
+    "footer footer footer footer";
+}
+
+.medecine-img {
+  height: 500px;
+  width: 40%;
+  grid-area: intro;
+  background-color: #ff00004f;
+}
