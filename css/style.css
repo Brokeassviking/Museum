@@ -46,21 +46,18 @@ html{
   --flex: flex: 1
 }
 
-.a-1{
-  position: relative;
-}
 
 h2 {
   font-family: var(--main-text);
 }
 
 p {
-  
 width: 500px;
 font-family: var(--small-text);
 color: white;
 padding: 12px;
 }
+
 .grid-fp {
   display: grid;
   grid-template-columns: auto;
@@ -100,41 +97,52 @@ header {
   display: flex;
   box-shadow: 0px 3px 6px 0px black;
   z-index: 2;
+  justify-content: space-between;
+  
 }
-header a {
-  font-family: var(--main-text);
+ul{
+  display: flex;
+  height: 108px;
+  width: 530px;
+  gap: 70px;
 }
+
+
+
+
 
 .logo {
   display: inline-block;
   height: 125px;
   width: 125px;
 }
-
-.background-cosmo {
-  background-image: url(/images/ivana-cajina-asuyh-_ZX54-unsplash.jpg);
+.bg-intro{
+  background-image: url(/images/anthony-delanoix-ae1zKHoreQ8-unsplash.jpg);
   background-repeat: no-repeat;
-  background-attachment: scroll;
   background-size: cover;
+  background-position: 50%;
+  height: 900px;
+  opacity: 0.45;
 }
+
 
 .dropdb {
   background-color: #2fadbe;
   color: white;
   padding: 0px 16px;
-  font-size: 16px;
+  font-size: 20px;
   border: none;
   font-family: "Heebo", sans-serif;
   border-radius: 20px;
-  margin-left: 190px;
-  margin-top: 60px;
-  box-sizing: border-box;
+  height: 100px;
+
 }
 
 .dropdown {
   position: relative;
   display: inline-block;
   border-radius: 15px;
+  align-self: center;
 }
 
 .dropdown-items {
@@ -144,9 +152,7 @@ header a {
   min-width: 160px;
   box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
-  border-radius: 10px;
-  margin-left:  190px; 
-  margin-top: 15px;  
+  border-radius: 10px;  
 }
 
 .dropdown-items a {
@@ -163,20 +169,32 @@ header a {
 .dropdown:hover .dropdown-items {
   display: block;
 }
-@keyframes dropup {
- 0% {padding: 0px 40px 0px 40px;}
- 50%{padding: 0px 40px 0px 40px;}
- 75%{padding: 0px 40px 0px 40px;}
-100% {padding: 0px 40px 0px 40px;}
-}
-.dropdown:hover .dropdb {
-  background-color: #26bf6d;
-  padding: 10px 40px 10px 40px;
-  animation-name: dropup;
-  animation-duration: 2s;
-  animation-iteration-count: 1;
-  
 
+.dropdown:hover .dropdb {
+ 
+  background-color: #26bf6d;
+  box-sizing: border-box;
+  width: 100%;
+
+
+}
+
+.overlay{
+  content: "";
+position: absolute;
+bottom: 100%;
+left: 0;
+right: 0;
+transition: ease .2s;
+overflow: hidden;
+background-color: var(--menu-green);
+height: 0;
+width: 100%;
+}
+
+.overlay:hover{
+  bottom:0;
+  height: 100%;
 }
 
 
@@ -187,17 +205,22 @@ header a {
   grid-area: intro;
   text-align: center;
   font-family: "Nunito", sans-serif;
-  margin-top: 200px;
-  
 }
 .intro-txt{
-  position: absolute;
-  top: 25%;
   width: 100%;
-  background: #fff;
-  padding: 50px;
   margin: auto;
+  color: rgb(235, 154, 32);
+  
 }
+.intro-pos{
+  position: absolute;
+z-index: 2;
+top: 390px;
+text-align: center;
+font-size: 3em;
+left: 270px;
+}
+
 
 
 
@@ -205,6 +228,9 @@ header a {
   height: 500px;
   width: 450px;
   border: solid white 20px;
+}
+p1{
+  color: #f1f1f1;
 }
 
 .grid-a1-img{
@@ -311,7 +337,6 @@ span{
   display: block;
   margin-bottom: 15px;
 }
-
 
 @media screen and (min-width: 300px) and (max-width: 600px) {
 }
