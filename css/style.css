@@ -35,9 +35,15 @@ html{
   overflow-x: hidden;
   
 }
+
+* , ::after ::before{
+  box-sizing: border-box;
+}
+
 .body-hp{
   background-color: #000000c2;
 }
+
 :root {
   --main-text: "Heebo";
   --small-text: "Nunito";
@@ -49,10 +55,17 @@ html{
 
 h2 {
   font-family: var(--main-text);
+  position: relative;
+width: 90%;
+padding: 50px;
+margin: auto;
+text-align: center;
 }
 
 p {
 font-family: var(--small-text);
+max-width: 500px;
+margin: 25px auto;
 }
 
 .grid-fp {
@@ -63,6 +76,8 @@ font-family: var(--small-text);
   "header header header header"
   "intro intro intro intro"
   "main main main main"
+  "main-2 main-2 main-2 main-2"
+  "event event event event"
   "footer footer footer footer"
   ;
   margin: auto;
@@ -71,25 +86,41 @@ font-family: var(--small-text);
 .grid-a1 {
  grid-area: main;
   margin-top: 38px;
- 
   padding-top: 15px;
   
   
 }
-.grid-a1 p{
-  width:500px;
-  position: relative;
-  left: 550px;
- 
-}
+
 
 .grid-a2{
- grid-area: footer;
+ grid-area: main-2;
  display: flex;
  gap: 100px;
  margin-top: 100px;
 margin-left: 100px;
+flex-wrap: wrap;
 }
+
+.grid-a2 p, .grid-a3 h2,.grid-a3 p{
+  
+  background: white;
+}
+
+.grid-a3{
+  grid-area: event;
+  display: flex;
+  gap: 100px;
+  margin-top: 100px;
+  margin-left: 100px;
+  flex-wrap: wrap;
+}
+
+
+
+
+
+
+
 
 
 header {
@@ -184,26 +215,6 @@ ul{
 
 }
 
-.overlay{
-  content: "";
-position: absolute;
-bottom: 100%;
-left: 0;
-right: 0;
-transition: ease .2s;
-overflow: hidden;
-background-color: var(--menu-green);
-height: 0;
-width: 100%;
-}
-
-.overlay:hover{
-  bottom:0;
-  height: 100%;
-}
-
-
-
 
 .welcome {
   
@@ -254,7 +265,6 @@ p1{
   padding: 85px;
   color: white;
   border: solid;
-  text-align: center;
 }
 
 .container {
@@ -329,7 +339,7 @@ p1{
 .fact{
   display:none;
 }
-.fun-fact:hover >  .fact{
+.fun-fact:hover > .fact{
   display: block;
   rotate: 180deg;
   padding: 100px;
@@ -368,14 +378,15 @@ margin-left: 150px;
 
 
 .test-nav a{
-  color: white;
+  color: black;
   font-size: 25px;
   background-color: #eb9a20;
   align-self: center;
   padding: 10px;
-  width: 200px;
+  width: 205px;
   text-align: center;
   text-decoration: none;
+  font-family: var(--small-text);
 
 }
 

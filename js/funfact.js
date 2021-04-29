@@ -2,12 +2,10 @@
 console.log('i think this is hard af');
 console.log("but i do not give up")
 
-setTimeout(delaytxt() => {
-    
-}, 2000);
-function delaytxt(){
-    
+const target= document.querySelector(".delaytxt")
+const span= document.querySelector("fun-fact") 
 
-    document.getElementsByName("delaytxt").style.visebility = "visible"
-}
+
+
+
 

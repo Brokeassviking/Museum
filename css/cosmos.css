@@ -1,5 +1,4 @@
-body {
-  background-image: url(/images/ivana-cajina-asuyh-_ZX54-unsplash.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
+img {
+  height: 600px;
+  width: 650px;
 }

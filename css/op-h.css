@@ -1,0 +1,52 @@
+.bg-vh {
+  background-image: url(/images/exhibition-1863344_1920.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  margin: auto;
+}
+
+.a1 {
+  font-size: 2em;
+  margin-top: 100px;
+}
+
+.a1::after {
+  content: "";
+  display: block;
+  background-color: aliceblue;
+  height: 900px;
+  position: absolute;
+  filter: opacity(0.8);
+  width: 1909px;
+  z-index: -1;
+  bottom: -3222.03px;
+}
+.a2 {
+  font-size: 1em;
+  height: 800px;
+}
+.a2::after {
+  content: "";
+  display: block;
+  background-color: aliceblue;
+  height: 650px;
+  position: relative;
+  filter: opacity(0.8);
+  bottom: 630px;
+  z-index: -1;
+}
+.a3 {
+  font-size: x-large;
+  height: 700px;
+}
+.a3::after {
+  content: "";
+  display: block;
+  background-color: aliceblue;
+  height: 600px;
+  position: relative;
+  filter: opacity(0.8);
+  bottom: 570px;
+  z-index: -1;
+}
