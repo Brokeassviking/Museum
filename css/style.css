@@ -31,13 +31,19 @@
 
 
 html{
-  max-width: auto;
+  max-width: 1900px;
   overflow-x: hidden;
   
 }
+
+* , ::after ::before{
+  box-sizing: border-box;
+}
+
 .body-hp{
   background-color: #000000c2;
 }
+
 :root {
   --main-text: "Heebo";
   --small-text: "Nunito";
@@ -49,13 +55,17 @@ html{
 
 h2 {
   font-family: var(--main-text);
+  position: relative;
+width: 90%;
+padding: 50px;
+margin: auto;
+text-align: center;
 }
 
 p {
-width: 500px;
 font-family: var(--small-text);
-color: white;
-padding: 12px;
+max-width: 500px;
+margin: 25px auto;
 }
 
 .grid-fp {
@@ -66,6 +76,8 @@ padding: 12px;
   "header header header header"
   "intro intro intro intro"
   "main main main main"
+  "main-2 main-2 main-2 main-2"
+  "event event event event"
   "footer footer footer footer"
   ;
   margin: auto;
@@ -74,19 +86,41 @@ padding: 12px;
 .grid-a1 {
  grid-area: main;
   margin-top: 38px;
- 
   padding-top: 15px;
-  display: flex;
+  
   
 }
 
+
 .grid-a2{
- grid-area: footer;
+ grid-area: main-2;
  display: flex;
  gap: 100px;
  margin-top: 100px;
 margin-left: 100px;
+flex-wrap: wrap;
 }
+
+.grid-a2 p, .grid-a3 h2,.grid-a3 p{
+  
+  background: white;
+}
+
+.grid-a3{
+  grid-area: event;
+  display: flex;
+  gap: 100px;
+  margin-top: 100px;
+  margin-left: 100px;
+  flex-wrap: wrap;
+}
+
+
+
+
+
+
+
 
 
 header {
@@ -100,6 +134,8 @@ header {
   justify-content: space-between;
   
 }
+
+
 ul{
   display: flex;
   height: 108px;
@@ -122,7 +158,7 @@ ul{
   background-size: cover;
   background-position: 50%;
   height: 900px;
-  opacity: 0.45;
+  filter: brightness(50%);
 }
 
 
@@ -179,26 +215,6 @@ ul{
 
 }
 
-.overlay{
-  content: "";
-position: absolute;
-bottom: 100%;
-left: 0;
-right: 0;
-transition: ease .2s;
-overflow: hidden;
-background-color: var(--menu-green);
-height: 0;
-width: 100%;
-}
-
-.overlay:hover{
-  bottom:0;
-  height: 100%;
-}
-
-
-
 
 .welcome {
   
@@ -213,12 +229,13 @@ width: 100%;
   
 }
 .intro-pos{
-  position: absolute;
-z-index: 2;
-top: 390px;
-text-align: center;
-font-size: 3em;
-left: 270px;
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  font-size: 3em;
+  font-family: var(--main-text);
+  grid-area: intro;
+  top: 250px;
 }
 
 
@@ -243,34 +260,23 @@ p1{
 }
 
 .txt-fp {
-  margin-left: 36px;
-  margin-top: 15px;
-  background-color: red;
-  margin-right: -629px;
-  width: 1032.5px;
-  margin-bottom: 36px;
-  border-radius: 4%;
-  padding-left: 85px;
-  padding-top: 60px;
-  flex: 50%;
+  margin: auto;
+  width: 85%;
+  padding: 85px;
   color: white;
   border: solid;
-
 }
 
-.container{
+.container {
   position: relative;
 }
-
 .txt-ff {
   color: white;
-  text-decoration:bold;
+  text-decoration: bold;
   position: absolute;
   top: 160px;
   left: 550px;
   z-index: 2;
-  font-family: 'Audiowide', cursive;
-  font-size: x-large;
 }
 .fun-fact {
   text-align: center;
@@ -283,7 +289,7 @@ p1{
   background: red;
   border-radius: 100%;
   z-index: 1;
-  border: solid black 3px;
+  color:white;
 }
 .fun-fact-1 {
   top: 110px;
@@ -294,7 +300,7 @@ p1{
   display: block;
   background: green;
   border-radius: 100%;
-  z-index: -1;
+  z-index: 0;
 }
 .fun-fact-2 {
   left: 600px;
@@ -305,7 +311,7 @@ p1{
   display: block;
   background: purple;
   border-radius: 100%;
-  z-index: -1;
+  z-index: 0;
 }
 .fun-fact-3 {
   top: 220px;
@@ -316,7 +322,7 @@ p1{
   display: block;
   background: blue;
   border-radius: 100%;
-  z-index: -1;
+  z-index: 0;
 }
 .fun-fact-4 {
   left: 620px;
@@ -327,15 +333,67 @@ p1{
   display: block;
   background: yellow;
   border-radius: 100%;
-  z-index: 1;
+  z-index: 0;
 }
-span{
-  content: "";
-  width: 800px;
-  height: 5px;
-  background: black;
+
+.fact{
+  display:none;
+}
+.fun-fact:hover > .fact{
   display: block;
-  margin-bottom: 15px;
+  rotate: 180deg;
+  padding: 100px;
+
+}
+.fun-fact:hover{
+  width: 600px;
+  height: 300px;
+  transition: ease-out 1s;
+  transform: rotate(180deg);
+  z-index: 2;
+  border-radius: 0%;
+display:block;
+  color:white;
+}
+
+
+.test-nav{
+  position: relative;
+  display: flex;
+  gap: 100px;
+  z-index: 1;
+  
+}
+
+
+.s-nav{
+  display: grid;
+grid-area: intro;
+margin-top: 500px;
+margin-left: 150px;
+  position: relative;
+  border-radius: 15px;
+  align-self: center;
+}
+
+
+.test-nav a{
+  color: black;
+  font-size: 25px;
+  background-color: #eb9a20;
+  align-self: center;
+  padding: 10px;
+  width: 205px;
+  text-align: center;
+  text-decoration: none;
+  font-family: var(--small-text);
+
+}
+
+.test-nav a:hover{
+  background-color: black;
+  color: #eb9a20;
+
 }
 
 @media screen and (min-width: 300px) and (max-width: 600px) {
