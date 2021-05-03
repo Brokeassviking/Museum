@@ -15,16 +15,17 @@
   content: "";
   display: block;
   background-color: aliceblue;
-  height: 900px;
-  position: absolute;
+  height: 950px;
+  position: relative;
   filter: opacity(0.8);
   width: 1909px;
   z-index: -1;
-  bottom: -3222.03px;
+  bottom: 910px;
 }
 .a2 {
   font-size: 1em;
   height: 800px;
+  margin-bottom: 50px;
 }
 .a2::after {
   content: "";
@@ -39,6 +40,7 @@
 .a3 {
   font-size: x-large;
   height: 700px;
+  margin-bottom: 50px;
 }
 .a3::after {
   content: "";
@@ -47,6 +49,62 @@
   height: 600px;
   position: relative;
   filter: opacity(0.8);
-  bottom: 570px;
+  bottom: 540px;
   z-index: -1;
+}
+.a4 {
+  margin-bottom: 50px;
+}
+
+.a4::after {
+  content: "";
+  display: block;
+  background-color: aliceblue;
+  height: 600px;
+  position: relative;
+  filter: opacity(0.8);
+  bottom: 575px;
+  width: 1903px;
+  z-index: -1;
+}
+.a5::after {
+  content: "";
+  display: block;
+  background-color: aliceblue;
+  height: 600px;
+  position: relative;
+  filter: opacity(0.8);
+  bottom: 550px;
+  width: 1903px;
+  z-index: -1;
+}
+
+.a6::after {
+  content: "";
+  display: block;
+  background-color: aliceblue;
+  height: 650px;
+  position: relative;
+  filter: opacity(0.8);
+  bottom: 600px;
+  width: 1903px;
+  z-index: -1;
+}
+
+#travle {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 100px;
+  margin-left: 150px;
+}
+
+#pos1 {
+  align-self: center;
+}
+
+#box {
+  background: aliceblue;
+  align-self: center;
+  border: black solid 15px;
+  padding: 15px 0px;
 }
