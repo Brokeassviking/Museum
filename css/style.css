@@ -24,23 +24,30 @@
 }
 
 @font-face {
-  font-family: 'Audiowide';
+  font-family: "Audiowide";
   font-style: normal;
   font-weight: 400;
-  font-display: swap;  src: url(https://fonts.gstatic.com/s/audiowide/v9/l7gdbjpo0cum0ckerWCdmA_OIxo.woff2) format('woff2');}
-
-
-html{
-  max-width: 1900px;
-  overflow-x: hidden;
-  
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/audiowide/v9/l7gdbjpo0cum0ckerWCdmA_OIxo.woff2)
+    format("woff2");
 }
 
-* , ::after ::before{
+/*all*/
+html {
+  max-width: 1900px;
+  overflow-x: hidden;
+}
+body {
+  margin: auto;
+}
+
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
-.body-hp{
+.body-hp {
   background-color: #000000c2;
 }
 
@@ -49,80 +56,22 @@ html{
   --small-text: "Nunito";
   --babyblue: #2fadbe;
   --menu-green: #26bf6d;
-  --flex: flex: 1
 }
-
 
 h2 {
   font-family: var(--main-text);
   position: relative;
-width: 90%;
-padding: 50px;
-margin: auto;
-text-align: center;
+  width: 90%;
+  padding: 50px;
+  margin: auto;
+  text-align: center;
 }
 
 p {
-font-family: var(--small-text);
-max-width: 500px;
-margin: 25px auto;
+  font-family: var(--small-text);
+  max-width: 500px;
+  margin: 25px auto;
 }
-
-.grid-fp {
-  display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: auto;
-  grid-template-areas: 
-  "header header header header"
-  "intro intro intro intro"
-  "main main main main"
-  "main-2 main-2 main-2 main-2"
-  "event event event event"
-  "footer footer footer footer"
-  ;
-  margin: auto;
-  
-}
-.grid-a1 {
- grid-area: main;
-  margin-top: 38px;
-  padding-top: 15px;
-  
-  
-}
-
-
-.grid-a2{
- grid-area: main-2;
- display: flex;
- gap: 100px;
- margin-top: 100px;
-margin-left: 100px;
-flex-wrap: wrap;
-}
-
-.grid-a2 p, .grid-a3 h2,.grid-a3 p{
-  
-  background: white;
-}
-
-.grid-a3{
-  grid-area: event;
-  display: flex;
-  gap: 100px;
-  margin-top: 100px;
-  margin-left: 100px;
-  flex-wrap: wrap;
-}
-
-
-
-
-
-
-
-
-
 header {
   grid-area: header;
   height: 125px;
@@ -132,35 +81,20 @@ header {
   box-shadow: 0px 3px 6px 0px black;
   z-index: 2;
   justify-content: space-between;
-  
 }
 
-
-ul{
+ul {
   display: flex;
   height: 108px;
   width: 530px;
   gap: 70px;
 }
 
-
-
-
-
 .logo {
   display: inline-block;
   height: 125px;
   width: 125px;
 }
-.bg-intro{
-  background-image: url(/images/anthony-delanoix-ae1zKHoreQ8-unsplash.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 50%;
-  height: 900px;
-  filter: brightness(50%);
-}
-
 
 .dropdb {
   background-color: #2fadbe;
@@ -171,7 +105,6 @@ ul{
   font-family: "Heebo", sans-serif;
   border-radius: 20px;
   height: 100px;
-
 }
 
 .dropdown {
@@ -188,7 +121,7 @@ ul{
   min-width: 160px;
   box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
-  border-radius: 10px;  
+  border-radius: 10px;
 }
 
 .dropdown-items a {
@@ -207,28 +140,115 @@ ul{
 }
 
 .dropdown:hover .dropdb {
- 
   background-color: #26bf6d;
   box-sizing: border-box;
   width: 100%;
-
-
 }
 
+/*Grids*/
+
+.grid-fp {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "header header header header"
+    "intro intro intro intro"
+    "main main main main"
+    "main-2 main-2 main-2 main-2"
+    "event event event event"
+    "footer footer footer footer";
+  margin: auto;
+}
+.grid-a1 {
+  grid-area: main;
+  margin-top: 38px;
+  padding-top: 15px;
+}
+
+.grid-a2 {
+  grid-area: main-2;
+  display: flex;
+  gap: 100px;
+  margin-top: 100px;
+  margin-left: 100px;
+  flex-wrap: wrap;
+}
+
+.grid-a3 {
+  grid-area: event;
+  display: flex;
+  gap: 100px;
+  margin-top: 100px;
+  margin-left: 100px;
+  flex-wrap: wrap;
+}
+
+/*main page*/
+
+.menu-item,
+.menu-item-2 {
+  transition: all 1s ease;
+  text-decoration: none;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.menu-item:hover,
+.menu-item-2:hover {
+  text-decoration: underline;
+}
+.menu-item::before {
+  content: "";
+  display: flex;
+  height: 650px;
+  width: 500px;
+  background: slategray;
+  position: absolute;
+  z-index: -1;
+  transition: all 0.3s ease-in-out;
+}
+.menu-item-2::before {
+  content: "";
+  display: flex;
+  height: 650px;
+  width: 500px;
+  background: slategray;
+  position: absolute;
+  z-index: -1;
+  transition: all 0.3s ease-in-out;
+}
+
+.menu-item:hover::before,
+.menu-item-2:hover:before {
+  width: 550px;
+  height: 630px;
+}
+
+.menu-item,
+.menu-item-2 p {
+  font-size: 20px;
+}
+
+.bg-intro {
+  background-image: url(/images/anthony-delanoix-ae1zKHoreQ8-unsplash.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50%;
+  height: 900px;
+  filter: brightness(50%);
+}
 
 .welcome {
-  
   grid-area: intro;
   text-align: center;
   font-family: "Nunito", sans-serif;
 }
-.intro-txt{
+.intro-txt {
   width: 100%;
   margin: auto;
   color: rgb(235, 154, 32);
-  
 }
-.intro-pos{
+.intro-pos {
   position: relative;
   z-index: 1;
   text-align: center;
@@ -238,25 +258,25 @@ ul{
   top: 250px;
 }
 
-
-
-
 .fp-img {
   height: 500px;
   width: 450px;
-  border: solid white 20px;
 }
-p1{
+
+.fp-img:hover {
+  transform: scale(1.09);
+}
+
+p1 {
   color: #f1f1f1;
 }
 
-.grid-a1-img{
+.grid-a1-img {
   width: 500px;
   height: 500px;
   flex: 50%;
   margin-right: 300px;
-  margin-top: 90px
-
+  margin-top: 90px;
 }
 
 .txt-fp {
@@ -289,7 +309,7 @@ p1{
   background: red;
   border-radius: 100%;
   z-index: 1;
-  color:white;
+  color: white;
 }
 .fun-fact-1 {
   top: 110px;
@@ -336,64 +356,113 @@ p1{
   z-index: 0;
 }
 
-.fact{
-  display:none;
+.fact {
+  display: none;
 }
-.fun-fact:hover > .fact{
+.fun-fact:hover > .fact {
   display: block;
   rotate: 180deg;
   padding: 100px;
-
 }
-.fun-fact:hover{
+.fun-fact:hover {
   width: 600px;
   height: 300px;
   transition: ease-out 1s;
   transform: rotate(180deg);
   z-index: 2;
   border-radius: 0%;
-display:block;
-  color:white;
+  display: block;
+  color: white;
 }
 
-
-.test-nav{
+.mid-nav {
   position: relative;
   display: flex;
   gap: 100px;
   z-index: 1;
-  
 }
 
-
-.s-nav{
+.s-nav {
   display: grid;
-grid-area: intro;
-margin-top: 500px;
-margin-left: 150px;
+  grid-area: intro;
+  margin-top: 500px;
+  margin-left: 150px;
   position: relative;
   border-radius: 15px;
   align-self: center;
 }
 
-
-.test-nav a{
+.mid-nav a {
   color: black;
   font-size: 25px;
   background-color: #eb9a20;
   align-self: center;
   padding: 10px;
-  width: 205px;
+  width: 225px;
   text-align: center;
   text-decoration: none;
   font-family: var(--small-text);
-
 }
 
-.test-nav a:hover{
+.mid-nav a:hover {
   background-color: black;
   color: #eb9a20;
+}
+/*Evolution*/
+.ev-bg::after {
+  content: "";
+  display: flex;
+  background-image: url(/images/boukaih-kelj-dino.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 760px;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  width: 1901px;
+}
 
+.boxses-size {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 100px;
+  background: black;
+  margin: 50px auto;
+}
+.boxses-size img {
+  margin: auto;
+  max-width: 700px;
+  max-height: 500px;
+}
+
+.boxses-size-rev {
+  flex-direction: row-reverse;
+  margin-top: 100px;
+}
+
+.cta-inn {
+  background: none;
+  border: 3px solid var(--menu-green);
+  font-family: var(--small-text);
+  line-height: 1;
+  margin: 6px;
+  padding: 15px 30px;
+  transition: 0.3s;
+  font-size: 20px;
+}
+.cta-inn:hover,
+.cta-inn:focus {
+  box-shadow: inset 0 0 0 2em var(--menu-green);
+}
+
+.info-box-ev {
+  background: #606060cf;
+  padding: 20px;
+  color: white;
+  padding: 20px;
+  font-family: var(--small-text);
+  margin: 70px auto;
+  max-width: 800px;
 }
 
 @media screen and (min-width: 300px) and (max-width: 600px) {
