@@ -7,38 +7,43 @@
     <meta name="description" content="Community Science Museum" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="css/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/cosmos.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Heebo&family=Nunito&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500&family=Heebo:wght@500&family=Nunito:wght@600&display=swap"
       rel="stylesheet"
     />
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
   </head>
   <body>
+    <main>
     <header>
       <a href="index.html"
         ><img class="logo" src="/images/logo museum.png" alt="logo"
       /></a>
       <nav>
         <ul>
-          <div class="dropdown">
-            <button class="dropbutton">Exsplore</button>
+          <li class="dropdown">
+            <button class="dropdb">Explore</button>
+            <div class="overlay"></div>
             <div class="dropdown-items">
               <a href="kids.html">For Kids</a>
-              <a href="to-do.html">Parents</a>
+              <a href="to-do.html">Teachers</a>
               <a href="researcher.html">Researcher</a>
-            </div>
-          </div>
-          <div class="dropdown">
-            <button class="dropbutton">Exhibition</button>
+            </li>
+          
+          <li class="dropdown">
+            <button class="dropdb">Exhibition</button>
             <div class="dropdown-items">
               <a href="cosmology.html">Cosmology</a>
               <a href="evolution.html">Evolution</a>
               <a href="bio-meds.html">Bio and Medecine</a>
               <a href="robots.html">Robots and AI</a>
               <a href="ecology.html">Ecology</a>
-            </div>
-          </div>
-          <a href="hours-oph.html">Visit?</a>
+            </li>
+          <li class="dropdown">
+          <a class="dropdb"  href="hours-oph.html">Visit?</a>
+        </li>
         </ul>
       </nav>
     </header>

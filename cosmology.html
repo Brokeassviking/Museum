@@ -13,8 +13,10 @@
       href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500&family=Heebo:wght@500&family=Nunito:wght@600&display=swap"
       rel="stylesheet"
     />
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
   </head>
   <body>
+    <main>
     <header>
       <a href="index.html"
         ><img class="logo" src="/images/logo museum.png" alt="logo"
@@ -22,7 +24,7 @@
       <nav>
         <ul>
           <li class="dropdown">
-            <button class="dropdb">Exsplore</button>
+            <button class="dropdb">Explore</button>
             <div class="overlay"></div>
             <div class="dropdown-items">
               <a href="kids.html">For Kids</a>
@@ -45,24 +47,32 @@
         </ul>
       </nav>
     </header>
+    
     <section>
-      <a href="item-1.html"
-        ><img
-          src="/images/bryan-goff-RF4p4rTM-2s-unsplash(1).jpg"
-          alt="our solar system"
-      /></a>
+      <div class="bg-cos">
+        <div class="info-box-cos">
+          <span class="planet"></span>
+          <article id="pos-txt">
       <h1>Explore the wonders of our cosmos.</h1>
       <p>
         Our fantastic exhibition, ‘The Sky Above Us’, explores the night sky and
-        what we can see and know about the universe around us. We’ll locate the
+        what we can see and know about the universe around us.<p> We’ll locate the
         various constellations and galaxies that can be seen and learn a bit
-        about the early navigators who used the stars to travel by. Follow the
+        about the early navigators who used the stars to travel by.</p> <p>Follow the
         journey of our solar exploration: from early Arab traders, to Galileo’s
-        telescope, to the latest exploration of the planets in our solar system.
-      </p>
+        telescope, to the latest exploration of the planets in our solar system.</p>
+        </p>
+      </article>
+    </div>
+    </div>
+     
     </section>
     <section>
-      <img src="/images/andrew-ruiz-348421.jpg" alt="space-travler" />
+      <div class="boxses-size"> 
+        <img src="/images/andrew-ruiz-348421.jpg" alt="space-travler" />
+        <div class="info-box-ev">
+          <p>Take a look at the equipment that astronausts uses</p>
+     
       <p>
         As of January 2018, people from 37 countries have traveled in space. 553
         people have reached Earth orbit. 556 have reached the altitude of space
@@ -71,9 +81,16 @@
         24 people have traveled beyond low Earth orbit and either circled,
         orbited, or walked on the Moon.
       </p>
+     
+    </div>
+    </div>
     </section>
+    
     <section>
+      <div class="boxses-size boxses-size-rev">
+        
       <img src="/images/celso-405219.jpg" alt="Solar eclipse" />
+      <div class="info-box-ev">
       <h2>Solar Eclipse</h2>
       <p>
         A solar eclipse occurs when a portion of the Earth is engulfed in a
@@ -84,18 +101,26 @@
         by the Moon. In partial and annular eclipses, only part of the Sun is
         obscured.
       </p>
+    </div>
+    </div>
+    <div class="boxses-size ">
+      <div class="info-box-ev">
       <img
-        src="/images/nasa-1lfI7wkGWZ4-unsplash(1).jpg"
-        alt="the view from nasa space station"
-      />
-      <p>see the images from nasa's space station.</p>
+        src="/images/ross-sneddon-NAPBJyy5Eqg-unsplash.jpg"
+        alt="a giant Orrery"/>
+      <p>Check out our Orrery. Thats a gigant mecanical solar system</p>
+    </div>
+    </div>
     </section>
-    <section>
+    <section class="boxses-size">
+      <div class="info-box-ev">
       <img
         src="/images/reno-laithienne-CwJP_8mKvTo-unsplash.jpg"
         alt="the old trading and art in antient egypt"
       />
       <p>as people evolved the stars grew closer and closer</p>
+    </div>
+    <div class="info-box-ev">
       <img
         src="/images/k-mitch-hodge-wZfndoCA1rA-unsplash.jpg"
         alt="Galileo’s thoughts encaptured in stone"
@@ -104,11 +129,17 @@
         Galileo’s thoughts went from wanting to see the stars to inventing the
         telescope
       </p>
+    </div>
+    <div class="info-box-ev">
       <img
         src="/images/uriel-soberanes-gCeH4z9m7bg-unsplash.jpg"
         alt="the telescope the way to look at the stars"
       />
       <p>The telescope was invented in 1609 by Galileo</p>
+      <p>You can learn how to navigate the starts in YSC</p>
+      <a href="ysc.html"><button class="cta-inn">Join YSC here!</button></a>
+    </div>
     </section>
+  </main>
   </body>
 </html>
