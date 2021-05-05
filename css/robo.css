@@ -1,0 +1,21 @@
+.bg-robo {
+  background-image: url(/images/michael-dziedzic-aQYgUYwnCsM-unsplash\(1\).jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: scroll;
+  height: 500px;
+}
+
+.info-box-robo {
+  background: #606060e5;
+  padding-top: 100px;
+  color: white;
+  font-family: var(--small-text);
+  margin: auto;
+  max-width: 800px;
+  height: 500px;
+}
+#robot {
+  height: 1000px;
+  width: 1200px;
+}

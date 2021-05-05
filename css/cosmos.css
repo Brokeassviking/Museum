@@ -1,4 +1,46 @@
+.bg-cos {
+  background-image: url(/images/bryan-goff-RF4p4rTM-2s-unsplash\(1\).jpg);
+  background-attachment: scroll;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 600px;
+  z-index: 1;
+}
+#pos-txt {
+  padding-left: 125px;
+  padding-top: 125px;
+}
+
 img {
   max-height: 600px;
   max-width: 650px;
+}
+
+.info-box-cos {
+  height: 400px;
+  width: 500px;
+  left: 750px;
+  top: 135px;
+  z-index: 0;
+  position: absolute;
+}
+
+.planet {
+  display: block;
+  position: absolute;
+  border-radius: 100%;
+  height: 550px;
+  width: 600px;
+  background: whitesmoke;
+  z-index: -1;
+  border: orange solid 30px;
+}
+
+@keyframes text-show {
+  0% {
+    visibility: hidden;
+  }
+  100% {
+    visibility: visible;
+  }
 }
