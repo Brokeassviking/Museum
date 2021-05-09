@@ -1,7 +1,7 @@
 .bg-robo {
   background-image: url(/images/michael-dziedzic-aQYgUYwnCsM-unsplash\(1\).jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-repeat: repeat;
+  background-size: contain;
   background-attachment: scroll;
   height: 500px;
 }
