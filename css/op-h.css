@@ -55,6 +55,9 @@
 .a4 {
   margin-bottom: 50px;
 }
+.a4 h2 {
+  padding: 0px;
+}
 
 .a4::after {
   content: "";
@@ -107,4 +110,14 @@
   align-self: center;
   border: black solid 15px;
   padding: 15px 0px;
+}
+
+@media screen and (min-width: 300px) and (max-width: 600px) {
+  #travle {
+    display: block;
+    margin-left: auto;
+  }
+  #travle img {
+    width: 360px;
+  }
 }
