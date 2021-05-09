@@ -5,6 +5,14 @@
   background-attachment: fixed;
   margin: auto;
 }
+.a1 h2,
+.a2 h2,
+.a3 h2,
+.a4 h2,
+.a5 h2,
+.a6 h2 {
+  padding: 0;
+}
 
 .a1 {
   font-size: 2em;
@@ -41,6 +49,7 @@
   font-size: x-large;
   height: 700px;
   margin-bottom: 50px;
+  text-align: center;
 }
 .a3::after {
   content: "";
@@ -113,11 +122,58 @@
 }
 
 @media screen and (min-width: 300px) and (max-width: 600px) {
+  .bg-vh {
+    background: black;
+  }
   #travle {
     display: block;
     margin-left: auto;
   }
   #travle img {
     width: 360px;
+  }
+  .a1::after,
+  .a2::after,
+  .a3::after,
+  .a4::after,
+  .a5::after,
+  .a6::after {
+    width: auto;
+    top: -630px;
+  }
+  .mapouter {
+    display: none;
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 900px) {
+  .bg-vh {
+    background: black;
+  }
+  #travle {
+    display: block;
+    margin-left: auto;
+  }
+  #travle img {
+    width: auto;
+    margin: 25px 70px;
+  }
+  .mapouter {
+    display: none;
+  }
+  .a1::after,
+  .a2::after,
+  .a3::after,
+  .a4::after,
+  .a5::after,
+  .a6::after {
+    width: auto;
+    top: -630px;
+    color: white;
+  }
+}
+@media screen and (min-width: 900px) and (max-width: 1200px) {
+  .cta-inn {
+    margin-left: -54px;
+    padding: 10px 15px;
   }
 }
