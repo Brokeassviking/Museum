@@ -342,6 +342,40 @@ p1 {
   background-color: black;
   color: #eb9a20;
 }
+/*Cosmos*/
+.bg-cos {
+  background-image: url(/images/bryan-goff-RF4p4rTM-2s-unsplash\(1\).jpg);
+  background-attachment: scroll;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 600px;
+  z-index: 1;
+}
+#pos-txt {
+  padding-left: 125px;
+  padding-top: 125px;
+}
+
+.info-box-cos {
+  height: 400px;
+  width: 500px;
+  left: 750px;
+  top: 20px;
+  z-index: 0;
+  position: relative;
+}
+
+.planet {
+  display: block;
+  position: absolute;
+  border-radius: 100%;
+  height: 550px;
+  width: 600px;
+  background: whitesmoke;
+  z-index: -1;
+  border: orange solid 30px;
+}
+
 /*Evolution*/
 .ev-bg::after {
   content: "";
@@ -485,7 +519,7 @@ p1 {
   text-align: center;
 }
 .info-box-kids {
-  background: #606060cf;
+  background: #464444d9;
   padding: 20px;
   color: yellow;
   font-family: var(--small-text);
@@ -547,6 +581,97 @@ p1 {
 .vol-box img {
   margin: 50px;
 }
+/*meds*/
+
+.bg-meds {
+  background-image: url(/images/william-bout.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 500px;
+  z-index: -2;
+  position: relative;
+  padding-top: 20px;
+}
+.bg {
+  background-color: #f0f8ffc4;
+  height: 450px;
+  width: 700px;
+}
+
+.info-box {
+  max-width: 800px;
+  margin: auto;
+}
+.info-box h1 {
+  margin: 0px auto;
+  text-align: center;
+}
+
+.meds-a1 {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 50px auto;
+  height: 1000px;
+  color: white;
+  background: black;
+}
+.meds-a2 {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 50px auto;
+  height: 1000px;
+  color: white;
+  background: black;
+}
+
+.box-med,
+.box-med-2 {
+  background-color: gray;
+  width: 500px;
+  height: 950px;
+  border: white solid 5px;
+}
+.box-med img,
+.box-med-2 img {
+  height: 500px;
+  width: 490px;
+}
+.container-med,
+.container-med-2 {
+  display: flex;
+  gap: 500px;
+  margin: 15px auto;
+  height: 900px;
+}
+.container-med h2 {
+  font-family: var(--main-text);
+  position: relative;
+  padding: 50px;
+  text-align: center;
+  font-size: 30px;
+}
+/*robots*/
+.bg-robo {
+  background-image: url(/images/michael-dziedzic-aQYgUYwnCsM-unsplash\(1\).jpg);
+  background-repeat: repeat;
+  background-size: contain;
+  background-attachment: scroll;
+  height: 500px;
+}
+
+.info-box-robo {
+  background: #606060e5;
+  padding-top: 100px;
+  color: white;
+  font-family: var(--small-text);
+  margin: auto;
+  max-width: 800px;
+  height: 500px;
+}
+#robot {
+  height: 1000px;
+  width: 1200px;
+}
 
 @media screen and (min-width: 300px) and (max-width: 600px) {
   /*front-page*/
@@ -560,9 +685,14 @@ p1 {
     gap: 50px;
     margin-left: 30px;
   }
+  .menu-item,
+  .menu-item-2 {
+    width: 300px;
+  }
 
   img,
-  .menu-item img {
+  .menu-item img,
+  .boxses-size-eco img {
     height: 300px;
     width: 300px;
   }
@@ -597,7 +727,7 @@ p1 {
   .info-box-kids img,
   #kids-area-b1 {
     height: 400px;
-    width: 300px;
+    width: 320px;
   }
   .info-box-sml,
   .info-box-sml img {
@@ -608,6 +738,89 @@ p1 {
   }
   #cent-1 {
     margin: 45px;
+  }
+  .res-box {
+    display: inline-block;
+    margin: auto;
+  }
+  .vol-box {
+    display: inline-block;
+    margin: 25px -20px;
+  }
+  /*visit*/
+  #travle {
+    flex-direction: column;
+    gap: 50px;
+  }
+  /*cosmos*/
+  .info-box-cos {
+    top: 0px;
+    left: -110px;
+    background-color: gray;
+    color: white;
+    height: 100%;
+  }
+  .planet {
+    display: none;
+  }
+  .boxses-size img {
+    height: 300px;
+    width: 300px;
+  }
+  /*meds*/
+  .bg-meds {
+    height: auto;
+  }
+  .info-box {
+    max-width: 800px;
+    margin: auto;
+    background: #f0f8ffbd;
+  }
+  .info-box h1 {
+    text-align: inherit;
+  }
+  .box-med,
+  .box-med-2 {
+    height: auto;
+    width: auto;
+    margin: 80px auto;
+  }
+  .box-med img,
+  .box-med-2 img {
+    width: 350px;
+  }
+  .container-med,
+  .container-med-2 {
+    display: inline-block;
+    height: auto;
+  }
+  .a1,
+  .a2 {
+    height: auto;
+  }
+
+  /*robot*/
+  #robot {
+    width: 300px;
+    height: 300px;
+  }
+  /*eco*/
+  .bg-eco::after {
+    right: 0px;
+    width: 350px;
+  }
+  .info-box-eco {
+    width: auto;
+    height: auto;
+  }
+  .info-box-eco h1 {
+    text-align: inherit;
+  }
+  .boxses-size-eco {
+    flex-direction: row;
+  }
+  #box-size-3 {
+    margin: 25px 50px;
   }
 }
 @media screen and (min-width: 600px) and (max-width: 900px) {
@@ -647,6 +860,7 @@ p1 {
   .menu-item,
   .menu-item-2 {
     width: 350px;
+    margin: auto;
   }
   /*Kids*/
 
@@ -657,6 +871,65 @@ p1 {
   }
   #cent-1 {
     margin: 60px auto;
+  }
+  .res-box {
+    display: inline-block;
+    margin: auto;
+  }
+
+  /*cosmos*/
+  .info-box-cos {
+    top: 0px;
+    left: 0px;
+    background-color: gray;
+    color: white;
+    height: 100%;
+    width: 800px;
+  }
+  .planet {
+    display: none;
+  }
+  /*meds*/
+  .info-box {
+    max-width: 800px;
+    margin: auto;
+    background: #f0f8ffbd;
+  }
+  .info-box h1 {
+    text-align: inherit;
+  }
+  .box-med,
+  .box-med-2 {
+    height: auto;
+    width: auto;
+    margin: 80px auto;
+  }
+  .box-med img,
+  .box-med-2 img {
+    width: 350px;
+  }
+  .container-med,
+  .container-med-2 {
+    height: auto;
+    gap: 10px;
+  }
+  .a1,
+  .a2 {
+    height: auto;
+  }
+  /*robots*/
+  #robot {
+    height: 500px;
+    width: 500px;
+  }
+  /*eco*/
+  #box-size-3 {
+    margin: 25px 50px;
+  }
+
+  .boxses-size-eco img {
+    height: 350px;
+    width: 350px;
   }
 }
 
@@ -694,5 +967,30 @@ p1 {
   }
   #cent-1 {
     margin: 45px 320px;
+  }
+  /*meds*/
+  .container-med,
+  .container-med-2 {
+    height: auto;
+    gap: 30px;
+  }
+  /*cosmos*/
+  .info-box-cos {
+    left: auto;
+    margin: auto;
+  }
+  /*robots*/
+  #robot {
+    width: 500px;
+    height: 500px;
+  }
+  /*eco*/
+  .boxses-size-eco img {
+    height: 450px;
+    width: 450px;
+  }
+
+  #box-size-3 {
+    margin: 25px 50px;
   }
 }
